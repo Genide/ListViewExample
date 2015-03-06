@@ -7,7 +7,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -27,7 +26,7 @@ public class MainActivity extends ActionBarActivity {
         //1) Contextual information about our app. this
         //2) The type of layout we are using
         //3) The array to convert
-        ListAdapter theAdapter = new ArrayAdapter<String>(this, R.layout.row_layout, R.id.textView1, names);
+        ListAdapter theAdapter = new MyAdapter(this, names);
 
         //Links the mainListView to main_list_view in xml
         final ListView mainListView = (ListView)findViewById(R.id.main_list_view);
