@@ -1,3 +1,4 @@
+//This example is to use an ArrayAdapter in conjunction with a ListView
 package com.practice.daniel.listviewexample;
 
 import android.support.v7.app.ActionBarActivity;
