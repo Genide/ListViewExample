@@ -27,11 +27,11 @@ public class MainActivity extends ActionBarActivity {
         //1) Contextual information about our app. this
         //2) The type of layout we are using
         //3) The array to convert
-        ListAdapter theAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, names);
+        ListAdapter theAdapter = new ArrayAdapter<String>(this, R.layout.row_layout, R.id.textView1, names);
 
         //Links the mainListView to main_list_view in xml
         final ListView mainListView = (ListView)findViewById(R.id.main_list_view);
-        //Tell mainListView what data to use
+        // Tell mainListView what data to use
         mainListView.setAdapter(theAdapter);
 
         //Now do something when an item is clicked.
@@ -42,7 +42,7 @@ public class MainActivity extends ActionBarActivity {
                     //Then displayed name picked in a toast.
                     String namePicked = "You picked " + String.valueOf(parent.getItemAtPosition(position));
                     //Display the toast.
-                    Toast.makeText(MainActivity.this, namePicked,Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, namePicked,Toast.LENGTH_SHORT).show();
                 }
             });
     }
